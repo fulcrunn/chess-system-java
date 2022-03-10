@@ -53,13 +53,12 @@ public class Board {
 		if (!positionExists(position)) {
 			throw new BoardException("ERROR: Position not exits on the board.");
 		}
-		if (position == null) {
+		if (piece(position) == null) {
 			return null;
 		}
 		Piece aux = piece(position);
 		aux.position = null;
 		pieces[position.getRow()][position.getColumn()] = null;
-		
 		return aux;
 		
 	}
