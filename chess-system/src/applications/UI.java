@@ -45,7 +45,7 @@ public class UI { //user interface method
 			int row = Integer.parseInt(s.substring(1));
 			return new ChessPosition(column, row);
 		}catch (RuntimeException e) {
-			throw new InputMismatchException("Erro reading ChessPosition: Valid values are from a1 to i8. "); 
+			throw new InputMismatchException("Erro reading ChessPosition: Valid values are from a1 to h8. "); 
 		}
 		
 		
@@ -61,7 +61,7 @@ public class UI { //user interface method
 			System.out.println("");
 		}
 		
-		System.out.println("  a b c d f g h i");
+		System.out.println("  a b c d e f g h ");
 	}
 	
 public static void printPiece(ChessPiece piece) {
