@@ -1,12 +1,16 @@
 package applications;
 
+import java.util.Scanner;
+
 import chess.ChessPiece;
+import chess.ChessPosition;
 import chess.Color;
 
-public class UI {
+public class UI { //user interface method
 	
 	// https://stackoverflow.com/questions/5762491/how-to-print-color-in-console-using-system-out-println
 	// crtl+shift+F to alignment
+	// remember: The colors only work in terminal
 
 	public static final String ANSI_RESET = "\u001B[0m";
 	public static final String ANSI_BLACK = "\u001B[30m";
@@ -33,6 +37,10 @@ public class UI {
 		System.out.flush();
 	}
 	
+	//public static ChessPosition readChessPostion(Scanner sc) {
+		
+	//}
+	
 	public static void printBoard(ChessPiece[][] pieces) {
 		
 		for(int i=0; i<pieces.length; i++) {
@@ -54,9 +62,11 @@ public static void printPiece(ChessPiece piece) {
     else {
         if (piece.getColor() == Color.WHITE) {
             System.out.print(ANSI_WHITE + piece + ANSI_RESET);
+        	//System.out.print(piece);
         }
         else {
             System.out.print(ANSI_YELLOW + piece + ANSI_RESET);
+        	//System.out.print(piece);
         }
     }
     System.out.print(" ");
